@@ -1,0 +1,13 @@
+<form [formGroup]="hotelsForm" (ngSubmit)="submit()">
+  <label>Desired Destination</label>
+  <input formControlName="name">
+  <label>Interest Level (1 low -10 high)</label>
+  <input formControlName="price">
+  <!-- <label>Rating</label> -->
+  <!-- <input formControlName="rating">
+  <label>Destination</label>
+  <input formControlName="destination"> -->
+  <button type="submit">Submit</button>
+
+
+</form>
