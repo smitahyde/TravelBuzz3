@@ -17,6 +17,9 @@ export const routes = [
     path: 'hotels/create',
     component: HotelsCreateComponent
   },
+    {path: 'hotels/update/:key',
+    component: HotelsCreateComponent
+},
 
   {
     path: '**',
