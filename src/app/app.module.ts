@@ -20,6 +20,7 @@ import { SearchComponent } from './search/search.component';
 
 import { routes } from './services/routes';
 import { HotelsCreateComponent } from './hotels-create/hotels-create.component';
+import { HotelsUpdateComponent } from './hotels-update/hotels-update.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { HotelsCreateComponent } from './hotels-create/hotels-create.component';
     FooterComponent,
     HomeComponent,
     SearchComponent,
-    HotelsCreateComponent
+    HotelsCreateComponent,
+    HotelsUpdateComponent
   ],
   imports: [
     BrowserModule,

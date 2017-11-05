@@ -1,0 +1,7 @@
+<form [formGroup]="hotelsUpdateForm" (ngSubmit)="submit()">
+  <label>Desired Destination</label>
+  <input formControlName="name">
+  <label>Interest Level (1 low -10 high)</label>
+  <input formControlName="interestLevel">
+  <button type="submit">Update</button>
+</form>

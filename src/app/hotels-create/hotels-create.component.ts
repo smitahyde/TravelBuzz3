@@ -30,11 +30,11 @@ export class HotelsCreateComponent implements OnInit {
       console.log(this.key);
     });
 
-  if (this.key) {
-   this.hotel = this.db.object('hotels/' + this.key).valueChanges();
-
+    if (this.key) {
+      this.hotel = this.db.object('hotels/' + this.key).valueChanges();
+      // this.key = params['key'];
       console.log(this.hotel);
-  }
+    }
   }
   submit() {
     console.log(this.hotelsForm.value);

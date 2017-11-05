@@ -1,7 +1,14 @@
 <h1> Input your Destination</h1>
 
 <form class="form-inline mt-2 mt-md-0">
-  <input class="form-control mr-sm-2" type="text" placeholder="Search">
+  <input #box class="form-control mr-sm-2" type="text" placeholder="Search" (keyup.enter)="submitSearch(box.value)">
   <input class="form-control mr-sm-2" type="date" placeholder="Date">
-  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  <button class="btn btn-outline-success my-2 my-sm-0" (click)="submitSearch(box.value)">Search</button>
 </form>
+
+<div class="hotels-container">
+  <div class="single-hotel" *ngFor="let hotel of hotelsArray">
+    <img class="hotel-icon" src="{{hotel.icon}}">
+    <h3 class="hotel-name">{{hotel.name}}</h3>
+  </div>
+</div>
