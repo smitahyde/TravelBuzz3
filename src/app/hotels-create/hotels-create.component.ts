@@ -9,11 +9,11 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./hotels-create.component.css']
 })
 export class HotelsCreateComponent implements OnInit {
-  constructor(
-    private db: AngularFireDatabase,
+  constructor(private db: AngularFireDatabase,
     private router: Router,
-    private route: ActivatedRoute
-  ) {}
+    private route: ActivatedRoute) {
+  }
+
   key;
   hotel;
 
@@ -21,7 +21,8 @@ export class HotelsCreateComponent implements OnInit {
     name: new FormControl(),
     rating: new FormControl(),
     price: new FormControl(),
-    destination: new FormControl()
+    destination: new FormControl(),
+    interestLevel: new FormControl()
   });
 
   ngOnInit() {
@@ -32,7 +33,6 @@ export class HotelsCreateComponent implements OnInit {
 
     if (this.key) {
       this.hotel = this.db.object('hotels/' + this.key).valueChanges();
-      // this.key = params['key'];
       console.log(this.hotel);
     }
   }
@@ -42,6 +42,9 @@ export class HotelsCreateComponent implements OnInit {
     const ref = this.db.list('hotels');
     ref.push(newHotel);
     this.router.navigate(['/hotels']);
+    this.db.database.ref('/hotels/').push(newHotel).then(function () {
+      console.log('entry pushed to firebase!!');
+  });
   }
 }
 

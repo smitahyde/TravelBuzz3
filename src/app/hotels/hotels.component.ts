@@ -62,10 +62,6 @@ export class HotelsComponent implements OnInit {
     });
   }
 
-updateItem(hotel) {
-  console.log (hotel);
-}
-
 
 }
 

@@ -21,6 +21,9 @@ import { SearchComponent } from './search/search.component';
 import { routes } from './services/routes';
 import { HotelsCreateComponent } from './hotels-create/hotels-create.component';
 import { HotelsUpdateComponent } from './hotels-update/hotels-update.component';
+import { SigninComponent } from './auth/signin/signin.component';
+import { SignupComponent } from './auth/signup/signup.component';
+import { AuthService } from './auth/auth.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,9 @@ import { HotelsUpdateComponent } from './hotels-update/hotels-update.component';
     HomeComponent,
     SearchComponent,
     HotelsCreateComponent,
-    HotelsUpdateComponent
+    HotelsUpdateComponent,
+    SigninComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +47,7 @@ import { HotelsUpdateComponent } from './hotels-update/hotels-update.component';
     ReactiveFormsModule,
 
   ],
-  providers: [AppComponent],
+  providers: [AppComponent, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -30,17 +30,21 @@ export class HotelsUpdateComponent implements OnInit {
       console.log(this.key);
     });
 
+
     if (this.key) {
       this.hotel = this.db.object('hotels/' + this.key).valueChanges();
 
       console.log('hello', this.key, this.hotel);
     }
 
-    // take the param :key and query the database for the specific hotel
-    // prepopulate input fields with that information
-    // allow user to update input fields
-    // when the user clicks update button, the database should update
-    // Then the user should be routed back to the listview 'My Bucket List'
+
   }
+
+  updateItem(hotel) {
+    console.log('update hotel');
+    this.db.database.ref('/hotels/' + hotel.actualKey).set(hotel).then(function() {
+      console.log('entry updated in firebase!!');
+      });
+    }
 
 }
