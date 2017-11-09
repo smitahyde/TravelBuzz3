@@ -1,19 +1,13 @@
 <div class="topnav" id="myTopnav">
     <a [routerLink]="['/']">Home</a>
-
+    <a [routerLink]="['/hotels']"> My Bucket List </a>
     <a href="http://www.travelandleisure.com/travel-news">Travel News</a>
     <a href="https://www.tripadvisor.com/Rentals">Vacation Rentals</a>
     <a href="https://www.travelocity.com/Vacation-Packages">Vacation-Packages</a>
-
     <a href="http://www.fodors.com/trip-ideas/">Fodors Travel</a>
-
     <a href="https://www.zagat.com/">Zagat Travel</a>
     <a href="https://www.tvfoodmaps.com/show/Best-Thing-I-Ever-Ate">Best thing I Ever Ate</a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-    <ng-template [ngIf]="!authService.isAuthenticated()">
-      <li><a [routerLink]="['/signup']">Signup</a></li>
-      <li><a [routerLink]="['/signin']">Login</a></li>
-    </ng-template>
-    <a [routerLink]="['/hotels']">My Bucket List</a>
-    <a [routerLink]="['/signin']">Logout</a>
+    <a [routerLink]="['/signup']">Signup</a>
+    <a [routerLink]="['/signin']">Login</a>
+    <a [routerLink]="['/logout']">Logout</a>
   </div>

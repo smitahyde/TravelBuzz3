@@ -20,5 +20,5 @@ export class AppComponent implements OnInit {
     this.loadedFeature = feature;
   }
 
-  title = "TRAVEL BUZZ";
+
 }
