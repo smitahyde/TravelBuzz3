@@ -42,5 +42,6 @@ export class HotelsCreateComponent implements OnInit {
         const newHotel = this.hotelsForm.value;
         const ref = this.db.list('hotels');
         ref.push(newHotel);
+        this.router.navigate(['/hotels']);
     }
 }

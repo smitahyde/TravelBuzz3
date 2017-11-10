@@ -42,7 +42,8 @@ export class AuthService {
         .then(
           response => {
               console.log(response);
-              this.router.navigate(['/']);
+              this.router.navigate(['/'])
+              .then(function(){alert('You are now logged out')});
           }
       )
       .catch(

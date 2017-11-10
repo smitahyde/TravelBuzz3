@@ -8,8 +8,6 @@
     <a href="https://www.zagat.com/">Zagat Travel</a>
     <a href="https://www.tvfoodmaps.com/show/Best-Thing-I-Ever-Ate">Best thing I Ever Ate</a>
     <a [routerLink]="['/signup']">Signup</a>
-    <a [routerLink]="['/signin']">Signin</a>
-    <!-- <li><a style="cursor: pointer;" (click)="onLogout()" *ngIf="authservice.is Authenticated()"> -->
-        <!-- Logout</a> </li> -->
-    <a [routerLink]="['/logout']">Logout</a>
+    <a [routerLink]="['/signin']" >Signin</a>
+    <a href="logout" onClick="return confirm('You are logged out!')">Logout</a>
   </div>

@@ -40,11 +40,6 @@ export class HotelsUpdateComponent implements OnInit {
       console.log('hotel: ', this.key, this.hotel);
     }
 
-    // take the param :key and query the database for the specific hotel
-    // prepopulate input fields with that information
-    // allow user to update input fields
-    // when the user clicks update button, the database should update
-    // Then the user should be routed back to the listview 'My Bucket List'
 
   }
 

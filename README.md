@@ -1,6 +1,12 @@
 # Travelbuzz2
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.9.
+The idea for travelbuzz was to create an application that makes it easy for 
+client to plan trips. Travelbuzz offers Travelnews, Vaction rentals, Fodors travel, Zagat travel, and Best thing I ever ate. On the home page I wanted to 
+provide a list of hotels as you enter in your destination, but my api does not 
+work. The Bucket list is a list of Adventure that you would like to do. Enter
+in your level of interest and go for your adventure!
+
 
 ## Development server
 
