@@ -38,8 +38,16 @@ export class AuthService {
     }
 
     logout() {
-        this.afa.auth.signOut();
-        this.token = null;
+        this.afa.auth.signOut()
+        .then(
+          response => {
+              console.log(response);
+              this.router.navigate(['/']);
+          }
+      )
+      .catch(
+          error => console.log(error)
+      );
     }
 
     getToken() {

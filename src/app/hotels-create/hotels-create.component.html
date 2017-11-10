@@ -1,13 +1,37 @@
-<form [formGroup]="hotelsForm" (ngSubmit)="submit()">
-  <label>Desired Destination</label>
-  <input formControlName="name">
-  <label>Interest Level (1 low -10 high)</label>
-  <input formControlName="price">
-  <!-- <label>Rating</label> -->
-  <!-- <input formControlName="rating">
-  <label>Destination</label>
-  <input formControlName="destination"> -->
+<form class="create-form" [formGroup]="hotelsForm" (ngSubmit)="submit()">
+  <table>
+    <tr>
+      <td class="input-label">
+        <label>Desired Destination</label>
+      </td>
+      <td>
+        <input formControlName="name">
+      </td>
+    </tr>
+    <tr>
+      <td class="input-label">
+        <label>Interest Level (1 low -10 high)</label>
+      </td>
+      <td>
+        <input formControlName="interestLevel">
+      </td>
+    </tr>
+    <tr>
+      <td class="input-label">
+        <label>Rating</label>
+      </td>
+      <td>
+        <input formControlName="rating">
+      </td>
+    </tr>
+    <tr>
+      <td class="input-label">
+        <label>Destination</label>
+      </td>
+      <td>
+        <input formControlName="destination">
+      </td>
+    </tr>
+  </table>
   <button type="submit">Submit</button>
-
-
 </form>

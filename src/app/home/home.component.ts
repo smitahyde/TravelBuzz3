@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
         const location = data.results[0].geometry.location;
         const lat = location.lat;
         const lng = location.lng;
-        return fetch(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lat},${lng}&radius=5000&name=hotel&key=AIzaSyDLALWvUzhLVjM75F18_Jt9ZMKorO4THu8`)
+        return fetch(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lat},${lng}&radius=5000&name=hotel&key=AIzaSyDLALWvUzhLVjM75F18_Jt9ZMKorO4THu8`);
       })
       .then((res) => {
         return res.json();

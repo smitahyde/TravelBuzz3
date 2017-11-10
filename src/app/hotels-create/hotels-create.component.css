@@ -1,0 +1,10 @@
+.create-form {
+    width: 80%;
+    margin: auto;
+    display: table-row;
+}
+
+.input-label {
+    text-align: left;
+    min-width: 300px;
+}
